@@ -1,0 +1,16 @@
+<launch>
+  <node name="quad_collision_planner_node" type="quad_collision_planner_node" pkg="quad_collision_planner" output="screen">
+    <param name="wayPtThreshold" type="string" value="0.015 0.015 0.015" />
+    <param name="minThreshold" type="string" value="0.015 0.015 0.015" />
+    <param name="step" type="string" value="0.03 0.03 0.03" />
+    <param name="proximityThreshold" type="double" value="0.50" />
+    <param name="avoidStep" type="int" value="3" />
+  </node>
+  <node name="quad_supervisor_node" type="quad_supervisor_node" pkg="quad_supervisor" output="screen">
+    <param name="targets/target1/value" type="string" value="-1.3 0 0.5" />
+    <param name="targets/target2/value" type="string" value="1.6 0 0.5" />
+    <param name="targets/target3/value" type="string" value="1.3 0 0.5" />
+    <param name="targets/target4/value" type="string" value="-1.6 0 0.5" />
+    <param name="repeat" type="int" value="1"/>
+  </node>
+</launch>
